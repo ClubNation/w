@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Nation</title>
+    <meta name="description" content="Club Nation tem como editorial principal notícias inovadoras de tecnologia, games, criptografia, startups e IoT, com um foco especial em inteligência artificial">
+    <meta name="keywords" content="Notícias de tecnologia, inteligência artificial, startups, IoT, criptografia, games, cultura digital, entretenimento, música, filmes, séries, eventos culturais, inovação, jornalismo ético, diversidade, inclusão, justiça social, impacto social, inovação tecnológica, tendências digitais, direitos humanos, análises de tecnologia, cobertura de eventos, G20, JMJ 2013, Olimpíadas Rio 2016, Copa do Mundo Brasil 2014, notícias diárias, seleção apurada, notícias inovadoras, cultura pop, cultura urbana, eventos internacionais, comunidade de tecnologia, jornalismo responsável, notícias atualizadas, tecnologia de ponta, veículos de comunicação, agregador de notícias, conteúdo diversificado, novas tendências, desenvolvimentos digitais, política, economia, sociedade, justiça social, mudanças tecnológicas, avanços tecnológicos, comunicação inclusiva, inovação digital, liderança em tecnologia, mídia digital, plataforma de comunicação, notícias globais">
+    <meta name="author" content="Club Nation">
+    <meta property="og:title" content="Club Nation">
+    <meta property="og:description" content="Club Nation tem como editorial principal notícias inovadoras de tecnologia, games, criptografia, startups e IoT, com um foco especial em inteligência artificial">
+    <meta property="og:image" content="URL_da_imagem_de_destaque">
+    <meta property="og:url" content="https://clubnation.com.br">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Club Nation">
+    <meta name="twitter:description" content="Club Nation tem como editorial principal notícias inovadoras de tecnologia, games, criptografia, startups e IoT, com um foco especial em inteligência artificial">
+    <meta name="twitter:image" content="URL_da_imagem_de_destaque">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="contentIframe" src="https://live-clubnationtech.pantheonsite.io" title="Club Nation"></iframe>
+    <script>
+        const iframe = document.getElementById('contentIframe');
+        
+        iframe.onerror = function() {
+            // Redireciona para uma página alternativa se o iframe falhar ao carregar
+            window.location.href = 'https://clubnation.com.br/erro-conexao';
+        };
+
+        iframe.onload = function() {
+            // Verifica se o conteúdo está acessível (não vazio)
+            if (iframe.contentDocument && iframe.contentDocument.body.innerHTML.trim() === '') {
+                window.location.href = 'https://clubnation.com.br/erro-conexao';
+            }
+        };
+    </script>
+</body>
+</html>
